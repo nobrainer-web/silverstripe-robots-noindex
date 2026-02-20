@@ -10,7 +10,7 @@
         "email": "mail@nobrainer.dk"
     }],
     "require": {
-        "silverstripe/cms": "^4 || ^5"
+        "silverstripe/cms": "^4 || ^5 || ^6"
     },
     "extra": {
         "installer-name": "robots-noindex"
