@@ -14,7 +14,7 @@ class NoIndexExtension extends Extension
 
     private static $no_index_domains;
 
-    public function MetaTags(&$tags)
+    public function updateMetaTags(&$tags)
     {
         if ($this->preventIndexing()) {
             $tags .= '
