@@ -16,15 +16,10 @@ class NoIndexExtension extends Extension
 
     public function updateMetaTags(&$tags)
     {
-        echo '<pre>';
-        print_r($this->preventIndexing());
-        echo '</pre>';
         if ($this->preventIndexing()) {
-            $tags .= '<meta name="robots" content="noindex, nofollow" />';
+            $tags .= '
+<meta name="robots" content="noindex, nofollow" />';
         }
-        echo '<pre>';
-        print_r($tags);
-        echo '</pre>';
 
         return $tags;
     }
