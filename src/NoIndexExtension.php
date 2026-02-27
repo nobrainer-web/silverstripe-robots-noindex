@@ -22,6 +22,9 @@ class NoIndexExtension extends Extension
         if ($this->preventIndexing()) {
             $tags .= '<meta name="robots" content="noindex, nofollow" />';
         }
+        echo '<pre>';
+        print_r($tags);
+        echo '</pre>';
 
         return $tags;
     }
