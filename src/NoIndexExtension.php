@@ -75,7 +75,7 @@ class NoIndexExtension extends Extension
 
     private function isOnDevDomain()
     {
-        $http_host = $_SERVER['HTTP_HOST'];
+        $http_host = $_SERVER['HTTP_HOST'] ?? ''; // not set in CLI (sake)
         $dev_servers = NoIndexExtension::config()->get('no_index_domains');
         if ($dev_servers) {
             foreach ($dev_servers as $server) {
